@@ -1,0 +1,46 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    --text: #050315;
+    --background: #fbfbfe;
+    --primary: #2f27ce;
+    --secondary: #dedcff;
+    --accent: #433bff;
+
+    background-color: var(--background);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Oxygen", sans-serif;
+    font-weight: bold;
+}
+
+p{
+    text-align: justify;
+}
+
+section{
+    background-color: var(--secondary);
+    border-radius: 15px;
+}
+
+.step-title{
+
+}
+
+.step-title-number{
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--primary);
+    background-color: var(--secondary);
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+}

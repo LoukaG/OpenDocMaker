@@ -5,7 +5,10 @@ chrome.runtime.onMessage.addListener(
         chrome.tabs.captureVisibleTab(win.id, {
           "format": "png"
         }).then(function (dataURI) {
-          chrome.storage.local.set({"image": dataURI, "message": request.message }, function () {
+          let guides = request.guides;
+          guides.push({ message: request.message, image: dataURI, clickX: request.clickX, clickY: request.clickY})
+          
+          chrome.storage.local.set({"guides": guides}, function () {
             sendResponse({ statut: "test" });
           });
         });
